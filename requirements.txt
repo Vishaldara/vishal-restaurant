@@ -1,0 +1,17 @@
+arrow==0.8.0
+dj-database-url==0.4.1
+Django==1.10.3
+django-bootstrap-forms==0.1
+django-disqus==0.5
+django-forms-bootstrap==3.0.1
+django-gravatar2==1.4.0
+funcsigs==1.0.2
+gravatar==0.1
+gunicorn==19.6.0
+mock==2.0.0
+pbr==1.10.0
+Pillow==2.9.0
+python-dateutil==2.6.0
+requests==2.12.1
+six==1.10.0
+stripe==1.42.0
