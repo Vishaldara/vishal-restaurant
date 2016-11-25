@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seasons</title>
+</head>
+<body>
+    <h1>List of contacts</h1>
+{% block content %}
+{% for contact in contact_list %}
+    {{ contact.first_name }}
+    {{ contact.last_name }}
+    {{ contact.mobile }}
+    {% endfor %}
+{% endblock %}
+</body>
+</html>

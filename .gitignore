@@ -1,0 +1,6 @@
+*.pyc
+*.php
+*.gif
+.idea
+.DS_Store
+db.sqlite3

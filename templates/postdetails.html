@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% block head_js %}{% endblock %}
+    <div class="row">
+        <div class="col-xs-9">
+            {% if post.image %}
+                <img src="/media/{{ post.image }}"
+                     style="width:100px; height: 100px; background-color: #12ABB2; color: #ffffff;" class="img-circle">
+            {% endif %}
+            <p>{{ post.content|linebreaks }}</p>
+            <p>
+                <button class="btn btn-default"
+                        onclick="location.href='/blog/'">Back to Blog
+                </button>
+            </p>
+        </div>
+        <div class="col-md-10 col-sm-9">
+            <h3>{{ post.title }}</h3>
+            <div class="row">
+                <div class="col-xs-9">
+
+                    <button class="btn btn-default" onclick="location.href='/blog/'">Back To Blog</button>
+                    {{ post.published_date }} | <strong>Views</strong> {{ post.views }} |
+                    <strong>Tag</strong> {{ post.tag }}
+                    {% load disqus_tags %}
+                    {% set_disqus_title post.title %}
+                    {% disqus_show_comments %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock content %}

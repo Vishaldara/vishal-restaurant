@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+{% block content %}
+    <!--=====================
+              Content
+    ======================-->
+                               <form method="post" class="form-horizontal">
+                    {% csrf_token %}
+                    {{ form |as_bootstrap_horizontal}}
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-envelope"
+                                                                                aria-hidden="true"></span></button>
+                    </div>
+                </form>
+
+
+
+                    <div class="details">
+                       <h1 style="font-size: 40px; text-align: center; color:black; font-family:cursive;"><b>Seasons Restaurant</b></h1>
+            <h3 style="font-size: 20px; text-align: center; ">43 Dame Street <br> Dublin 2<br> Ireland <br> <a href="#">
+                <span class="glyphicon glyphicon-map-marker"></span></a></h3>
+            <div style="width: 100%"><iframe width="100%" height="400" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=400&amp;hl=en&amp;q=43%20Dame%20Street%20Dublin2%20Ireland+(The%20Seasons)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.mapsdirections.info/pt/crie-um-google-map/">
+                Incorporar mapa Google</a> on <a href="http://www.mapsdirections.info/pt/">Calcular Rota</a></iframe></div><br />
+        </div>
+
+
+    <br>
+
+
+    <!--==============================
+                  footer
+    =================================-->
+{% endblock %}

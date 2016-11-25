@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load bootstrap_tags %}
+{% load staticfiles %}
+ 
+{% block head_js %}
+  <script src="https://js.stripe.com/v2/" type="text/javascript"></script>
+  <script type="text/javascript">
+      //<![CDATA[
+      Stripe.publishableKey = '{{ publishable }}';
+      //]]>
+  </script>
+  <script type="text/javascript" src="{% static "js/stripe.js" %}"></script>
+{% endblock %}
+ 
+{% block content %}
+  <form role="form" method="post" id="payment-form" action="{% url 'make_payment_stripe' %}">
+    <div id="credit-card-errors" style="display:none">
+      <div class="alert-message block-message error" id="stripe-error-message"></div>
+    </div>
+ 
+    <legend>Pay For A Product</legend>
+    {% csrf_token %}
+    {{ form|as_bootstrap }}
+    <div class="form-group">
+      <input class="btn btn-primary" id="submit_payment_btn" name="commit" type="submit" value="Submit Payment">
+    </div>
+  </form>
+{% endblock %}
