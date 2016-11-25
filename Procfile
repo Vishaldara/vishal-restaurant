@@ -1,1 +1,1 @@
-web: gunicorn .Seasons.wsgi:application
+web: gunicorn the_taz.wsgi:application

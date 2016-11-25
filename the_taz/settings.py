@@ -159,3 +159,4 @@ EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
+ALLOWED_HOSTS = [' stream3.herokuapp.com', 'localhost']
